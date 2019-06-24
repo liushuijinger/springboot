@@ -4,6 +4,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 /**
  * Spring MVC接收参数的方式
  *
@@ -40,7 +42,7 @@ public class ParamController {
 
     @ApiOperation(value = "@RequestBody方式")
     @PostMapping("/requestbody")
-    public User RequestBody(@RequestBody User user) {
+    public User RequestBody(@RequestBody @Valid User user) {
         return user;
     }
 }
