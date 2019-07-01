@@ -3,8 +3,10 @@ package com.imooc.springboot;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author 刘水镜
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2019/06/02
  */
 @Api
+@Slf4j
 @RestController
 public class HelloController {
 
@@ -19,8 +22,9 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello(@RequestParam(required = false) @ApiParam("名字") String name) {
         if (name != null && !"".equals(name)) {
-            return "Hello " + name;
+            name = "Spring Boot";
         }
-        return "Hello Spring Boot";
+        log.info("hello");
+        return "Hello "+name;
     }
 }
