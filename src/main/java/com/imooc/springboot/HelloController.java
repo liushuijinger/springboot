@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @ApiOperation(value = "Hello Spring Boot 方法")
-    @GetMapping("/hello")
+    @GetMapping(value = "/hello",headers = "version=2")
     public String hello(@RequestParam(required = false) @ApiParam("名字") String name) {
-        if (name != null && !"".equals(name)) {
+        if (name == null || "".equals(name)) {
             name = "Spring Boot";
         }
         log.info("hello");
