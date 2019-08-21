@@ -3,7 +3,6 @@ package com.imooc.springboot.swagger;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2019/06/02
  */
 @Api
-@Slf4j
 @RestController
 public class HelloController {
 
@@ -24,7 +22,6 @@ public class HelloController {
         if (name == null || "".equals(name)) {
             name = "Spring Boot";
         }
-        log.info("hello");
         return "Hello "+name;
     }
 }
