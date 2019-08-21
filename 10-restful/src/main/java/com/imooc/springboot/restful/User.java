@@ -1,4 +1,4 @@
-package com.imooc.springboot;
+package com.imooc.springboot.restful;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;

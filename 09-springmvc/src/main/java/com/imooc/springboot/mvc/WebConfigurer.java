@@ -1,8 +1,7 @@
-package com.imooc.springboot;
+package com.imooc.springboot.mvc;
 
-import com.imooc.springboot.mvc.LogInterceptor;
-import com.imooc.springboot.mvc.TimeInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -11,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @blog https://liushuijinger.blog.csdn.net
  * @date 2019/06/30
  */
-//@Configuration
+@Configuration
 public class WebConfigurer implements WebMvcConfigurer {
 
     @Autowired

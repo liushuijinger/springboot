@@ -1,4 +1,4 @@
-package com.imooc.springboot;
+package com.imooc.springboot.restful;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

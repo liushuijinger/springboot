@@ -1,4 +1,4 @@
-package com.imooc.springboot;
+package com.imooc.springboot.restful;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

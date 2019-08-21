@@ -8,10 +8,10 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.imooc.springboot</groupId>
-    <artifactId>restful</artifactId>
+    <groupId>com.imooc</groupId>
+    <artifactId>springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>restful</name>
+    <name>springboot</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

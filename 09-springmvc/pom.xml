@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.imooc.springboot</groupId>
-    <artifactId>restful</artifactId>
+    <artifactId>springmvc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>restful</name>
+    <name>springmvc</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
