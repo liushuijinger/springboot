@@ -1,4 +1,4 @@
-package com.imooc.springboot.mvc;
+package com.imooc.springboot.unittest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

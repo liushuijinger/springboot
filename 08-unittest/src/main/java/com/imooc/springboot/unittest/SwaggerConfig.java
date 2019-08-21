@@ -1,4 +1,4 @@
-package com.imooc.springboot.mvc;
+package com.imooc.springboot.unittest;
 
 import io.swagger.annotations.Api;
 import org.springframework.context.annotation.Bean;

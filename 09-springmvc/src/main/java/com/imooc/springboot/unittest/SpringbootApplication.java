@@ -1,4 +1,4 @@
-package com.imooc.springboot;
+package com.imooc.springboot.unittest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,11 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @blog https://liushuijinger.blog.csdn.net
  * @date 2019/06/02
  */
-@SpringBootApplication(scanBasePackages = "com.imooc.springboot")
+@SpringBootApplication(scanBasePackages = "com.imooc.springboot.unittest")
 public class SpringbootApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(com.imooc.springboot.unittest.SpringbootApplication.class, args);
+        SpringApplication.run(SpringbootApplication.class, args);
     }
 
 }

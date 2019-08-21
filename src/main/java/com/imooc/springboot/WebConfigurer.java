@@ -1,7 +1,7 @@
 package com.imooc.springboot;
 
-import com.imooc.springboot.mvc.LogInterceptor;
-import com.imooc.springboot.mvc.TimeInterceptor;
+import com.imooc.springboot.unittest.LogInterceptor;
+import com.imooc.springboot.unittest.TimeInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

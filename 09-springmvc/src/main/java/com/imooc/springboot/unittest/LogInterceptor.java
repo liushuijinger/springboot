@@ -1,4 +1,4 @@
-package com.imooc.springboot.mvc;
+package com.imooc.springboot.unittest;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

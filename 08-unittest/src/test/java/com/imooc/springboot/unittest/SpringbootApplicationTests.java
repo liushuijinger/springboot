@@ -1,4 +1,4 @@
-package com.imooc.springboot.mvc;
+package com.imooc.springboot.unittest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
