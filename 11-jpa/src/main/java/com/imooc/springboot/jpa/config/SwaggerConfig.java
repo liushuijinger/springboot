@@ -1,4 +1,4 @@
-package com.imooc.springboot.restful;
+package com.imooc.springboot.jpa.config;
 
 import io.swagger.annotations.Api;
 import org.springframework.context.annotation.Bean;

@@ -1,5 +1,6 @@
-package com.imooc.springboot.restful;
+package com.imooc.springboot.jpa.controller;
 
+import com.imooc.springboot.jpa.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;

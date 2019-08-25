@@ -1,5 +1,7 @@
-package com.imooc.springboot.restful;
+package com.imooc.springboot.jpa.config;
 
+import com.imooc.springboot.jpa.interceptor.LogInterceptor;
+import com.imooc.springboot.jpa.interceptor.TimeInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

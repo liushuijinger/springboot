@@ -1,8 +1,9 @@
-package com.imooc.springboot.restful;
+package com.imooc.springboot.jpa.model;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -14,9 +15,12 @@ import java.time.LocalDate;
  * @date 2019/06/23
  */
 @Data
+@Entity
 public class User {
 
-    private int id;
+    @Id
+    @GeneratedValue
+    private Integer id;
 
     @NotNull(message = "名字不能为空")
     private String name;

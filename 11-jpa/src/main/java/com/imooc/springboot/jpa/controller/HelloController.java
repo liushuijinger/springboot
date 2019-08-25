@@ -1,4 +1,4 @@
-package com.imooc.springboot.restful;
+package com.imooc.springboot.jpa.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

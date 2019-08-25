@@ -1,5 +1,6 @@
-package com.imooc.springboot.restful;
+package com.imooc.springboot.jpa.controller;
 
+import com.imooc.springboot.jpa.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class ParamController {
 
     @ApiOperation(value = "无注解方式")
     @GetMapping("/noannotation")
-    public User noAnnotation( User user) {
+    public User noAnnotation(User user) {
         return user;
     }
 
