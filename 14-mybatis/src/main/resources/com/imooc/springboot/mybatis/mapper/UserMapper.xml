@@ -5,7 +5,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="age" jdbcType="INTEGER" property="age" />
-    <result column="birth_day" jdbcType="DATE" property="birthDay" />
+    <result column="birth_day" jdbcType="TIMESTAMP" property="birthDay" />
     <result column="email" jdbcType="VARCHAR" property="email" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -105,7 +105,7 @@
     </selectKey>
     insert into user (name, age, birth_day, 
       email)
-    values (#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{birthDay,jdbcType=DATE}, 
+    values (#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{birthDay,jdbcType=TIMESTAMP}, 
       #{email,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.imooc.springboot.mybatis.model.User">
@@ -135,7 +135,7 @@
         #{age,jdbcType=INTEGER},
       </if>
       <if test="birthDay != null">
-        #{birthDay,jdbcType=DATE},
+        #{birthDay,jdbcType=TIMESTAMP},
       </if>
       <if test="email != null">
         #{email,jdbcType=VARCHAR},
@@ -161,7 +161,7 @@
         age = #{record.age,jdbcType=INTEGER},
       </if>
       <if test="record.birthDay != null">
-        birth_day = #{record.birthDay,jdbcType=DATE},
+        birth_day = #{record.birthDay,jdbcType=TIMESTAMP},
       </if>
       <if test="record.email != null">
         email = #{record.email,jdbcType=VARCHAR},
@@ -176,7 +176,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       age = #{record.age,jdbcType=INTEGER},
-      birth_day = #{record.birthDay,jdbcType=DATE},
+      birth_day = #{record.birthDay,jdbcType=TIMESTAMP},
       email = #{record.email,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -192,7 +192,7 @@
         age = #{age,jdbcType=INTEGER},
       </if>
       <if test="birthDay != null">
-        birth_day = #{birthDay,jdbcType=DATE},
+        birth_day = #{birthDay,jdbcType=TIMESTAMP},
       </if>
       <if test="email != null">
         email = #{email,jdbcType=VARCHAR},
@@ -204,7 +204,7 @@
     update user
     set name = #{name,jdbcType=VARCHAR},
       age = #{age,jdbcType=INTEGER},
-      birth_day = #{birthDay,jdbcType=DATE},
+      birth_day = #{birthDay,jdbcType=TIMESTAMP},
       email = #{email,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
