@@ -1,4 +1,4 @@
-package com.imooc.springboot.mybatis;
+package com.imooc.springboot.transaction;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-package com.imooc.springboot.restful;
+package com.imooc.springboot.transaction;
 
 import org.junit.*;
 import org.junit.runner.RunWith;

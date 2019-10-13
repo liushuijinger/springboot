@@ -11,7 +11,7 @@
     <groupId>com.imooc.springboot</groupId>
     <artifactId>transaction</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mybatis</name>
+    <name>transaction</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

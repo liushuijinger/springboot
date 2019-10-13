@@ -1,6 +1,5 @@
 package com.imooc.springboot.transaction.mapper;
 
-
 import com.imooc.springboot.transaction.model.User;
 import com.imooc.springboot.transaction.model.UserExample;
 import org.apache.ibatis.annotations.Param;
