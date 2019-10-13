@@ -43,7 +43,7 @@
 
         <!-- targetPackage：生成的实体类所在的包 -->
         <!-- targetProject：生成的实体类所在的硬盘位置 -->
-        <javaModelGenerator targetPackage="com.imooc.springboot.mybatis.model" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.imooc.springboot.transaction.model" targetProject="src/main/java">
             <!--  for MyBatis3/MyBatis3Simple
                自动为每一个生成的类创建一个构造方法，构造方法包含了所有的field；而不是使用setter；
            -->
@@ -66,13 +66,13 @@
         </javaModelGenerator>
 
         <!-- targetPackage 和 targetProject：生成的 mapper 文件的包和位置 -->
-        <sqlMapGenerator targetPackage="com.imooc.springboot.mybatis.mapper" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="com.imooc.springboot.transaction.mapper" targetProject="src/main/resources">
             <!-- 针对数据库的一个配置，是否把 schema 作为字包名 -->
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
         <!-- targetPackage 和 targetProject：生成的 interface 文件的包和位置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.imooc.springboot.mybatis.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.imooc.springboot.transaction.mapper"
                              targetProject="src/main/java">
             <!-- 针对 oracle 数据库的一个配置，是否把 schema 作为字包名 -->
             <property name="enableSubPackages" value="false"/>
