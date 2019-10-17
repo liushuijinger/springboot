@@ -17,6 +17,6 @@ public class TransactionServiceTest {
 
     @Test
     public void a() {
-        transactionService.a();
+        transactionService.batchInsert();
     }
 }
