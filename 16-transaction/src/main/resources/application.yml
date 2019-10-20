@@ -12,4 +12,6 @@ server:
 
 logging:
   level:
-    root: debug
+#    root: debug
+    com.imooc.springboot.transaction.mapper: debug
+    org.springframework.jdbc.datasource: debug

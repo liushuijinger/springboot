@@ -1,7 +1,6 @@
 package com.imooc.springboot.transaction.controller;
 
 import com.imooc.springboot.transaction.service.TransactionService;
-import com.imooc.springboot.transaction.service.UserService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +20,8 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
-    @Autowired
-    private UserService userService;
-
     @GetMapping("/batchinsert")
     public void batchInsert() {
-        userService.batchInsert();
+        transactionService.batchInsert();
     }
 }
