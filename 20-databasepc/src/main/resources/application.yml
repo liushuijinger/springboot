@@ -1,6 +1,8 @@
 #数据源配置
 spring:
   datasource:
+    # 这一项不需要显式指定
+    type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
@@ -16,40 +18,56 @@ spring:
       timeBetweenEvictionRunsMillis: 60000
       # 配置一个连接在池中最小生存的时间，单位是毫秒
       minEvictableIdleTimeMillis: 300000
-      validationQuery: SELECT 1 FROM DUAL
+      validationQuery: SELECT 1
       testWhileIdle: true
+      # 申请连接时执行 validationQuery 检测连接是否有效
       testOnBorrow: false
+      # 归还连接时执行 validationQuery 检测连接是否有效
       testOnReturn: false
-      # 打开PSCache，并且指定每个连接上PSCache的大小
-      poolPreparedStatements: true
-      maxPoolPreparedStatementPerConnectionSize: 20
-      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
-      filters: stat,wall,slf4j
-      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-      # 合并多个DruidDataSource的监控数据
-      #useGlobalDataSourceStat=true
+      # 是否缓存 preparedStatement，Druid 官方建议 MySQL 中关闭此项。
+#      poolPreparedStatements: true
+#      maxPoolPreparedStatementPerConnectionSize: 20
       # 开启监控，配置信息
       stat-view-servlet:
-        login-username: druid
-        login-password: 123456
-        reset-enable: false
+        # 开启监控页面
         enabled: true
+        # 监控系统用户名
+        login-username: druid
+        # 监控系统密码
+        login-password: 123456
+        # 是否允许清空监控数据
+        reset-enable: false
+        # 监控系统路径
         url-pattern: "/druid/*"
+        # 可访问监控系统的 IP 列表（白名单）
+        # allow: 127.0.0.1
+        # 禁止访问监控系统的 IP 列表（黑名单）
+        # deny:
+      # 配置扩展插件，常用的插件有：监控统计用的 stat，日志用的 slf4j，防御 sql 注入的 wall
+      filters: stat,wall,slf4j
+      # 用来打开 SQL 参数化合并监控和慢 SQL 记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 合并多个 DruidDataSource 的监控数据
+      useGlobalDataSourceStat: true
       # 开启 web 监控（Web应用、URI监控、Session监控）
       web-stat-filter:
+        # 开启 Web 监控
         enabled: true
+        # 需要监控的路径
         url-pattern: /*
+        # 不监控静态文件和监控系统自己的请求
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+        # 统计请求调用链
+        profile-enable: true
       # 开启 Spring 监控
       aop-patterns: com.imooc.springboot.databasepc.controller.*,com.imooc.springboot.databasepc.service.*,com.imooc.springboot.databasepc.mapper.*
       # 日志配置
       filter:
         slf4j:
-          statement-log-enabled: true
-          statement-executable-sql-log-enable: true
           enabled: true
+          statement-executable-sql-log-enable: true
 
+  # Redis 配置
   redis:
     host: 127.0.0.1
     port: 6379
@@ -61,12 +79,14 @@ spring:
         max-idle: 10
         max-wait: 2000
 
-server:
-  servlet:
-    context-path: /springboot
 
 logging:
   level:
-#    root: debug
-    com.imooc.springboot.databasepc.mapper: debug
-    org.springframework.jdbc.datasource: debug
+    # 输出 SQL
+    druid.sql.Statement: debug
+    # 输出查询结果
+    druid.sql.ResultSet: debug
+
+server:
+  servlet:
+    context-path: /springboot
