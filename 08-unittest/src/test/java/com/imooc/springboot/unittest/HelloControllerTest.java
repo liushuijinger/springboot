@@ -1,4 +1,4 @@
-package com.imooc.springboot.swagger;
+package com.imooc.springboot.unittest;
 
 import org.junit.*;
 import org.junit.runner.RunWith;

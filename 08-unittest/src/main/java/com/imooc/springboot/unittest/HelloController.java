@@ -1,4 +1,4 @@
-package com.imooc.springboot.swagger;
+package com.imooc.springboot.unittest;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

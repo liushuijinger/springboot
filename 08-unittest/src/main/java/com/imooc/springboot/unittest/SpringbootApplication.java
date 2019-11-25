@@ -1,4 +1,4 @@
-package com.imooc.springboot.swagger;
+package com.imooc.springboot.unittest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

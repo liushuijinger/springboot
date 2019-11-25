@@ -1,4 +1,4 @@
-package com.imooc.springboot.swagger;
+package com.imooc.springboot.mvc;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
