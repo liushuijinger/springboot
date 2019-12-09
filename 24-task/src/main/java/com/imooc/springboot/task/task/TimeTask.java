@@ -17,31 +17,31 @@ public class TimeTask {
 
     private int count = 0;
 
-    @Scheduled(fixedDelay = 5000)
-    public void fixedDelayTask() throws InterruptedException {
-        if (count < 4) {
-            int timeConsuming = people[count];
-            log.info("fixedDelayTask-----第 {} 个人开始上厕所，耗时：{}ms",count+1, timeConsuming);
-            Thread.sleep(timeConsuming);
-            count++;
-        }
-    }
+//    @Scheduled(fixedDelay = 5000)
+//    public void fixedDelayTask() throws InterruptedException {
+//        if (count < 4) {
+//            int timeConsuming = people[count];
+//            log.info("fixedDelayTask-----第 {} 个人开始如厕，耗时：{}ms",count+1, timeConsuming);
+//            Thread.sleep(timeConsuming);
+//            count++;
+//        }
+//    }
 
-    @Scheduled(cron = "0/5 * * * * ? ")
-    public void cronTask() throws InterruptedException {
-        if (count < 4) {
-            int timeConsuming = people[count];
-            log.info("cronTask-----第 {} 个人开始上厕所，耗时：{}ms",count+1, timeConsuming);
-            Thread.sleep(timeConsuming);
-            count++;
-        }
-    }
+//    @Scheduled(cron = "0/5 * * * * ? ")
+//    public void cronTask() throws InterruptedException {
+//        if (count < 4) {
+//            int timeConsuming = people[count];
+//            log.info("cronTask-----第 {} 个人开始如厕，耗时：{}ms",count+1, timeConsuming);
+//            Thread.sleep(timeConsuming);
+//            count++;
+//        }
+//    }
 
     @Scheduled(fixedRate = 5000)
     public void fixedRateTask() throws InterruptedException {
         if (count < 4) {
             int timeConsuming = people[count];
-            log.info("fixedRateTask-----第 {} 个人开始上厕所，耗时：{}ms",count+1, timeConsuming);
+            log.info("fixedRateTask-----第 {} 个人开始如厕，耗时：{}ms",count+1, timeConsuming);
             Thread.sleep(timeConsuming);
             count++;
         }
