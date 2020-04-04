@@ -1,4 +1,4 @@
-package com.imooc.springboot.mybatis;
+package com.imooc.springboot.deploy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

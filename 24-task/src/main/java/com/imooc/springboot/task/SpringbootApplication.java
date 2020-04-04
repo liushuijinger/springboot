@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @date 2019/06/02
  */
 @EnableScheduling
-@SpringBootApplication(scanBasePackages = "com.imooc.springboot.task")
+@SpringBootApplication
 @MapperScan("com.imooc.springboot.task.mapper")
 public class SpringbootApplication {
 

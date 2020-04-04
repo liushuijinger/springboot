@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @blog https://liushuijinger.blog.csdn.net
  * @date 2019/06/02
  */
-@SpringBootApplication(scanBasePackages = "com.imooc.springboot.log")
+@SpringBootApplication
 @MapperScan("com.imooc.springboot.log.mapper")
 public class SpringbootApplication {
 
