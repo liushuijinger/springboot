@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/06/02
  */
 @SpringBootApplication
-@MapperScan("com.imooc.springboot.databasepc.mapper")
+@MapperScan("com.imooc.springboot.databasecp.mapper")
 public class SpringbootApplication {
 
     public static void main(String[] args) {
