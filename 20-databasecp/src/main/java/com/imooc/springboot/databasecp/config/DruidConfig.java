@@ -72,9 +72,9 @@ public class DruidConfig {
         JdkRegexpMethodPointcut druidStatPointcut = new JdkRegexpMethodPointcut();
 
         // AOP 切点
-        String[] patterns = {"com.imooc.springboot.databasepc.controller.*",
-                "com.imooc.springboot.databasepc.service.*",
-                "com.imooc.springboot.databasepc.mapper.*"};
+        String[] patterns = {"com.imooc.springboot.databasecp.controller.*",
+                "com.imooc.springboot.databasecp.service.*",
+                "com.imooc.springboot.databasecp.mapper.*"};
         druidStatPointcut.setPatterns(patterns);
         return druidStatPointcut;
     }
