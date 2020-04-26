@@ -60,7 +60,7 @@ spring:
         # 统计请求调用链
         profile-enable: true
       # 开启 Spring 监控
-      aop-patterns: com.imooc.springboot.databasepc.controller.*,com.imooc.springboot.databasepc.service.*,com.imooc.springboot.databasepc.mapper.*
+      aop-patterns: com.imooc.springboot.databasecp.controller.*,com.imooc.springboot.databasecp.service.*,com.imooc.springboot.databasecp.mapper.*
       # 日志配置
       filter:
         slf4j:
