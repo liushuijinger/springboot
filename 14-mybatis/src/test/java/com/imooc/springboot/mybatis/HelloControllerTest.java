@@ -33,7 +33,7 @@ public class HelloControllerTest {
 
     @Test
     public void hello() throws Exception {
-        MvcResult result = mvc.perform(get("/").param("name", "IMOOC").contentType(MediaType.APPLICATION_JSON))
+        MvcResult result = mvc.perform(get("/hello").header("version","2").param("name", "IMOOC").contentType(MediaType.APPLICATION_JSON))
                         .andExpect(content().string("Hello IMOOC")).andReturn();
 
         System.out.println("==="+result.getResponse().getContentAsString()+"===");
