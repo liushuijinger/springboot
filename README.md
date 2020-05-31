@@ -13,7 +13,7 @@ https://www.imooc.com/read/75
 
 
 ## 技术交流
-[![QQ群](https://img.shields.io/badge/QQ群-liushuijinger-20B8E5?logo=Tencent-QQ&style=flat)](https://jq.qq.com/?_wv=1027&k=0UCkec2u)
+[![QQ群](https://img.shields.io/badge/QQ群-168965372-20B8E5?logo=Tencent-QQ&style=flat)](https://jq.qq.com/?_wv=1027&k=0UCkec2u)
 [![博客](https://img.shields.io/badge/博客-我的博客-21759B?style=flat)](https://liushuijinger.blog.csdn.net)
 [![微博](https://img.shields.io/badge/微博-@水镜不酷-E6162D?logo=Sina-Weibo&lstyle=flat)](https://weibo.com/liushuijinger)
 
