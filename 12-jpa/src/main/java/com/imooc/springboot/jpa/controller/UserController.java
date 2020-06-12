@@ -40,6 +40,15 @@ public class UserController {
         return userRepository.findAll(pageable);
     }
 
+    @ApiOperation(value = "获取用户列表）支持模糊查询）")
+    @GetMapping("/page/{name}")
+    public Page<User> queryByName(@PathVariable String name, String direction, Integer page, Integer size) {
+
+        Pageable pageable = PageRequest.of(page, size);
+
+        return userRepository.findByNameContaining(name, pageable);
+    }
+
     @ApiOperation(value = "创建用户")
     @PostMapping("")
     public User create(@RequestBody User user) {
